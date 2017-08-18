@@ -13,7 +13,7 @@ class Fibonacci5 implements Callable<String> {
     }
     private Integer fib(int count) {
         if ((count > 2) || (count == 2)) {
-            return fib(count - 1) + fib(count -2);
+            return fib(count - 1) + fib(count - 2);
         } else {
             return 1;
         }
@@ -31,11 +31,11 @@ class Fibonacci5 implements Callable<String> {
 }
 public class Example_5 {
     public static void main(String[] args) {
-        Fibonacci5 fib = new Fibonacci5(4);
+        Fibonacci5 fib = new Fibonacci5(10);
         Fibonacci5 fib2 = new Fibonacci5(5);
         Fibonacci5 fib3 = new Fibonacci5(6);
         ExecutorService exec = Executors.newCachedThreadPool();
-        Future<String> result = exec.submit(fib3);
+        Future<String> result = exec.submit(fib);
         try {
             System.out.println("Result: " + result.get());
         } catch (ExecutionException ex) {
