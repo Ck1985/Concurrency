@@ -23,7 +23,10 @@ public class ResponsiveUI extends Thread {
             d = d + (Math.PI + Math.E) / d;
         }
     }
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception {
+        //new UnResponsiveUI();
+        new ResponsiveUI();
+        System.in.read();
+        System.out.println(d);
     }
 }
