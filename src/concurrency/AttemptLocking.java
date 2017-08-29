@@ -42,10 +42,10 @@ public class AttemptLocking {
             {this.setDaemon(true);}
             public void run() {
                 al.lock.lock();
-                System.out.println("aquirred");
+                System.out.println("acquired");
             }
         }.start();
-        //Now Give the 2nd teask a chance
+        //Now Give the 2nd task a chance
         Thread.yield();
         al.unTimed();
         al.timed();
