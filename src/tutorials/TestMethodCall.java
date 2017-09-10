@@ -20,7 +20,7 @@ class Foo {
         return result;
     }
 }
-public class TestMethodCall {
+public class TestMethodCall { //..............
     public static void main(String[] args) {
         Foo f1,f2;
         int x = 8;
